@@ -29,4 +29,14 @@ public class MovieManager {
         }
         return result;
     }
+    
+    public Movie getMovieByTitle(String title) {
+        for (Movie movie : movies) {
+            if (movie.getTitle().equalsIgnoreCase(title)) {
+                return movie;
+            }
+        }
+        return null;
+    }
+    
 }
